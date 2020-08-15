@@ -1,23 +1,17 @@
-const getEmployerRole = (employeeName, employees) => {};
+const getEmployerRole = (employeeName, employees) => {
+  let results;
+  employees.find(element => element.name === employeeName ? results = element.role : null)
 
-const employees = [{
-
-    name: 'Satti',
-  
-    role: 'Developer'
-  
-  }, {
-  
-    name: 'Jenny',
-  
-    role: 'Sales Associate'
-  
-  }, {
-  
-    name: 'Javid',
-  
-    role: 'Human Recommended Reading Assistant'
-  
-  }]
+  return results;
+};
 
 module.exports = getEmployerRole;
+
+
+// employees.find(element => {
+
+//   if(element.name === employeeName) {
+//     return element.role;
+//   }
+
+// });
