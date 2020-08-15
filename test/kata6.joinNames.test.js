@@ -3,12 +3,44 @@ const { joinNames } = require("../src");
 describe("joinNames", () => {
   test("returns string of names, seperated by commas and an ampersand", () => {
 
-  expect(joinNames('bart', 'lisa', 'maggie')).toEqual('Bart, Lisa & Maggie');
+  expect(joinNames([{
+
+    name: 'Bart'
+  
+  }, {
+  
+    name: 'Lisa'
+  
+  }, {
+  
+    name: 'Maggie'
+  
+  }])).toBe('Bart, Lisa & Maggie');
 
 });
 
   test("returns string of names, seperated by commas and an ampersand", () => {
 
-    expect(joinNames('Bart', 'Lisa', 'Maggie', 'Marge', 'Homer')).toEqual('Bart, Lisa, Maggie, Marge & Homer');
+    expect(joinNames([{
+
+      name: 'Bart'
+    
+    }, {
+    
+      name: 'Lisa'
+    
+    }, {
+    
+      name: 'Maggie'
+    
+    }, {
+    
+      name: 'Marge'
+    
+    }, {
+    
+      name: 'Homer'
+    
+    }])).toBe('Bart, Lisa, Maggie, Marge & Homer');
 });
 });
